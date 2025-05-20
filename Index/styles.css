@@ -653,10 +653,7 @@ main{
     text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
 }
 
-.projeto-nome {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+
 
 .projeto-preco {
   color: #ccc;
