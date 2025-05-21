@@ -48,7 +48,7 @@ function mostrarProjeto(n) {
   const atual = document.getElementById(`projeto-${projetoAtual}`);
   const novo = document.getElementById(`projeto-${n}`);
 
-  // Animação de saída
+
   atual.classList.remove('ativo');
   atual.classList.add('animando-sair');
 
@@ -56,7 +56,7 @@ function mostrarProjeto(n) {
     atual.classList.remove('animando-sair');
     atual.style.display = 'none';
 
-    // Animação de entrada
+
     novo.style.display = 'grid';
     novo.classList.add('animando-entrar', 'ativo');
 
