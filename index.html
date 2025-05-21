@@ -28,7 +28,7 @@
 
     <main>
       <div class="content">
-        <h1>Alec Vinícius <span class="subtitulo"><br>Developer</span></h1>
+        <h1>Alec Vinícius <span class="subtitulo" ><br>Developer</span></h1>
 
         <div class="social-icons">
           <a href="https://github.com/exdrama23"><i class='bx bxl-github'></i></a>
@@ -37,37 +37,37 @@
         </div>
       </div>
     </main>
-
-    <spline-viewer class="Light-boll" url="https://prod.spline.design/yN-GY-tIEbuTG0NS/scene.splinecode"></spline-viewer>
+    <spline-viewer class="Light-boll" id="animate-on-scroll" url="https://prod.spline.design/yN-GY-tIEbuTG0NS/scene.splinecode"></spline-viewer>
   </div>
 
   <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.93/build/spline-viewer.js"></script>
 
   <section class="objetivo" id="Objetivo">
-    <h2 class="heading">Objetivo <span>Profissional</span></h2>
+    <h2 class="heading">
+      <div class="animate-on-scroll">Objetivo <span>Profissional</span></div></h2>
 
-    <div class="objetivo-img">
+    <div class="objetivo-img"  revelar>
       <img src="imgs/imgIndex/alecs.jpg" alt="" />
       <span class="circulo"></span>
     </div>
 
-    <div class="objetivo-content">
-      <h3>Developer</h3>
-      <p>Atuar como desenvolvedor fullstack, aplicando e expandindo meus conhecimentos em tecnologias web e backend. 
+    <div class="objetivo-content" >
+      <h3 class="animate-on-scroll">Developer</h3>
+      <p class="animate-on-scroll">Atuar como desenvolvedor fullstack, aplicando e expandindo meus conhecimentos em tecnologias web e backend. 
         Busco oportunidades que promovam aprendizado contínuo,
         participação em projetos desafiadores e crescimento técnico e profissional dentro da área de desenvolvimento de sistemas.</p>
     </div>
   </section>
 
   <section class="Habilidades" id="Habilidades">
-    <h3 class="habilit"><span>Conhecimentos</span></h3>
+    <h3 class="habilit"><div class="animate-on-scroll"><span>Conhecimentos</span></div></h3>
 
-    <div class="Habilidades-row">
-      <div class="Habilidades-column">
-        <h3 class="titulo">Formação</h3>
+    <div class="Habilidades-row ">
+      <div class="Habilidades-column ">
+        <h3 class="titulo"> <div class="animate-on-scroll">Formação</div></h3>
         <div class="Habilidades-box">
 
-          <div class="Habilidades-content">
+          <div class="Habilidades-content animate-on-scroll">
             <div class="content">
               <div class="year"><i class='bx bx-calendar'></i> 2023 - 2025</div>
               <h3>SENAI-SE</h3>
@@ -75,7 +75,7 @@
             </div>
           </div>
 
-          <div class="Habilidades-content">
+          <div class="Habilidades-content animate-on-scroll">
             <div class="content">
               <div class="year"><i class='bx bx-calendar'></i>...</div>
               <h3>...</h3>
@@ -83,7 +83,7 @@
             </div>
           </div>
 
-          <div class="Habilidades-content">
+          <div class="Habilidades-content animate-on-scroll ">
             <div class="content">
               <div class="year"><i class='bx bx-calendar'></i>...</div>
               <h3>...</h3>
@@ -93,24 +93,24 @@
         </div>
       </div>
 
-      <div class="Habilidades-column">
+      <div class="Habilidades-column animate-on-scroll">
         <h3 class="titulo">Habilidades</h3>
-        <div class="Habilidades-box">
+        <div class="Habilidades-box ">
           <div class="Habilidades-content">
             <div class="content">
               <h3>Hard-skills</h3>
-              <p>javascript, python, R, C#, conhecimentos em front-end e backend, desenvolvimento web, conhecimentos em Exel,</p>
+              <p>javascript, python, R, C#, conhecimentos em front-end e backend, desenvolvimento web, conhecimentos em Exel</p>
             </div>
           </div>
 
-          <div class="Habilidades-content">
+          <div class="Habilidades-content animate-on-scroll ">
             <div class="content">
               <h3>Soft-skills</h3>
               <p>Boa comunicação, Trabalho em equipe, Vontade de aprender, Disponibilidade para viagens ou mudança</p>
             </div>
           </div>
 
-          <div class="Habilidades-content">
+          <div class="Habilidades-content animate-on-scroll">
             <div class="content">
               <h3>Linguagens Principais</h3>
               <p>javascript, html, css</p> <p>C#</p> <p>python</p>
@@ -120,80 +120,84 @@
       </div>
     </div>
   </section>
-   
-<section class="projetos-vitrine" >
-  <div id="projetos-container">
-    <h3 class="Projeto-T" id="Projetos"><span>Projetos</span></h3>
-    <!-- Projeto 1 -->
-    <div class="projeto-card ativo" id="projeto-1">
-      <div class="projeto-imagem">
-        <img src="imgs/imgIndex/Github-api.png" alt="Projeto 1">
-      </div>
-      <div class="projeto-info">
-        <p class="projeto-categoria">𝙰𝙿𝙸 𝚍𝚘 𝙶𝚒𝚝𝚑𝚞𝚋</p>
-        <p class="projeto-preco"> HTML, CSS, JavaScript, TypeScript e React.</p>
-        <p class="projeto-descricao">API do GitHub, autenticação de usuário </p>
-        <div class="tamanhos">
-          <a href="https://github.com/exdrama23/API-github" target="_blank"><button>GitHub</button></a><a href="https://api-github-mu-five.vercel.app/" target="_blank"><button>Function</button></a>
+ 
+<main>
+  <section class="projetos-vitrine animate-on-scroll" >
+    <div id="projetos-container">
+      <h3 class="Projeto-T" id="Projetos"><div class="animate-on-scroll"><span>Projetos</span></div></h3>
+      <!-- Projeto 1 -->
+      <div class="projeto-card ativo" id="projeto-1">
+        <div class="projeto-imagem">
+          <img src="imgs/imgIndex/Github-api.png" alt="Projeto 1">
         </div>
-        <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
-      </div>
-    </div>
-
-    <!-- Projeto 2 -->
-    <div class="projeto-card" id="projeto-2">
-      <div class="projeto-imagem">
-        <img src="imgs/imgIndex/AppPrevisao.png" alt="Projeto 2">
-      </div>
-      <div class="projeto-info">
-        <p class="projeto-categoria">App De Previsão - API</p>
-        <p class="projeto-preco">HTML, CSS e JavaScript</p>
-        <p class="projeto-descricao">Aplicação de clima que consome dados de uma API para exibir temperatura, clima e umidade em tempo real.</p>
-        <div class="tamanhos">
-        <a href="https://github.com/exdrama23/app_previsaoa" target="_blank"><button>GitHub</button></a><a href="https://appprevisaoa.vercel.app" target="_blank"><button>Function</button></a>
-        </div>
+        <div class="projeto-info">
+          <p class="projeto-categoria">𝙰𝙿𝙸 𝚍𝚘 𝙶𝚒𝚝𝚑𝚞𝚋</p>
+          <p class="projeto-preco"> HTML, CSS, JavaScript, TypeScript e React.</p>
+          <p class="projeto-descricao">API do GitHub, autenticação de usuário </p>
+          <div class="tamanhos">
+            <a href="https://github.com/exdrama23/API-github" target="_blank"><button>GitHub</button></a><a href="https://api-github-mu-five.vercel.app/" target="_blank"><button>Function</button></a>
+          </div>
           <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 3 -->
-    <div class="projeto-card" id="projeto-3">
-      <div class="projeto-imagem">
-        <img src="imgs/imgIndex/Formulario.png" alt="Projeto 3">
-      </div>
-      <div class="projeto-info">
-        <p class="projeto-categoria">Formulario Pessoal</p>
-        <p class="projeto-preco">JavaScript + Html</p>
-        <p class="projeto-descricao">Formulário feito com React + Vite. Possui campos de texto, seleção e envio de dados. Projeto simples para prática de formulários e organização</p>
-        <div class="tamanhos">
-          <a href="https://github.com/exdrama23/Formulario" target="_blank"><button>GitHub</button></a><a href="https://exdrama23.vercel.app" target="_blank"><button>Function</button></a>
+      <!-- Projeto 2 -->
+      <div class="projeto-card" id="projeto-2">
+        <div class="projeto-imagem">
+          <img src="imgs/imgIndex/AppPrevisao.png" alt="Projeto 2">
         </div>
-        <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
-      </div>
-    </div>
-     <!-- Projeto 4 -->
-    <div class="projeto-card" id="projeto-4">
-      <div class="projeto-imagem">
-        <img src="imgs/imgIndex/IAPesquisa.png" alt="Projeto 4">
-      </div>
-      <div class="projeto-info">
-        <p class="projeto-categoria">IA: Pesquisa De Imagens</p>
-        <p class="projeto-preco">Python, HTML e CSS</p>
-        <p class="projeto-descricao">Projeto de busca inteligente de imagens usando Bing Image Search API. Permite pesquisar imagens em tempo real</p>
-        <div class="tamanhos">
-          <a href="https://github.com/exdrama23/IA_de_pesquisa" target="_blank"><button>GitHub</button></a><a href="https://ia-de-pesquisa.vercel.app" target="_blank"><button>Function</button></a>
+        <div class="projeto-info">
+          <p class="projeto-categoria">App De Previsão - API</p>
+          <p class="projeto-preco">HTML, CSS e JavaScript</p>
+          <p class="projeto-descricao">Aplicação de clima que consome dados de uma API para exibir temperatura, clima e umidade em tempo real.</p>
+          <div class="tamanhos">
+          <a href="https://github.com/exdrama23/app_previsaoa" target="_blank"><button>GitHub</button></a><a href="https://appprevisaoa.vercel.app" target="_blank"><button>Function</button></a>
+          </div>
+            <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
         </div>
-        <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
+      </div>
+
+      <!-- Projeto 3 -->
+      <div class="projeto-card" id="projeto-3">
+        <div class="projeto-imagem">
+          <img src="imgs/imgIndex/Formulario.png" alt="Projeto 3">
+        </div>
+        <div class="projeto-info">
+          <p class="projeto-categoria">Formulario Pessoal</p>
+          <p class="projeto-preco">JavaScript + Html</p>
+          <p class="projeto-descricao">Formulário feito com React + Vite. Possui campos de texto, seleção e envio de dados. Projeto simples para prática de formulários e organização</p>
+          <div class="tamanhos">
+            <a href="https://github.com/exdrama23/Formulario" target="_blank"><button>GitHub</button></a><a href="https://exdrama23.vercel.app" target="_blank"><button>Function</button></a>
+          </div>
+          <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
+        </div>
+      </div>
+      <!-- Projeto 4 -->
+      <div class="projeto-card" id="projeto-4">
+        <div class="projeto-imagem">
+          <img src="imgs/imgIndex/IAPesquisa.png" alt="Projeto 4">
+        </div>
+        <div class="projeto-info">
+          <p class="projeto-categoria">IA: Pesquisa De Imagens</p>
+          <p class="projeto-preco">Python, HTML e CSS</p>
+          <p class="projeto-descricao">Projeto de busca inteligente de imagens usando Bing Image Search API. Permite pesquisar imagens em tempo real</p>
+          <div class="tamanhos">
+            <a href="https://github.com/exdrama23/IA_de_pesquisa" target="_blank"><button>GitHub</button></a><a href="https://ia-de-pesquisa.vercel.app" target="_blank"><button>Function</button></a>
+          </div>
+          <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
+        </div>
       </div>
     </div>
-  </div>
-    <div class="paginacao">
-      <button onclick="mostrarProjeto(1)">1</button>
-      <button onclick="mostrarProjeto(2)">2</button>
-      <button onclick="mostrarProjeto(3)">3</button>
-      <button onclick="mostrarProjeto(4)">4</button>
-    </div>
-</section>
+      <div class="paginacao">
+  <button onclick="anteriorProjeto()">&#10094;</button>
+  <button id="btn-1" onclick="mostrarProjeto(1)">1</button>
+  <button id="btn-2" onclick="mostrarProjeto(2)">2</button>
+  <button id="btn-3" onclick="mostrarProjeto(3)">3</button>
+  <button id="btn-4" onclick="mostrarProjeto(4)">4</button>
+  <button onclick="proximoProjeto()">&#10095;</button>
+</div>
+
+</main>
 
   <footer class="footer">
     <div class="footer-container">

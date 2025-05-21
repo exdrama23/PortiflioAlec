@@ -1,53 +1,106 @@
+//-----------------Animação-------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".animate-on-scroll").forEach(el => {
+        observer.observe(el);
+    });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".animate-on-scroll").forEach((el) => {
+    gsap.fromTo(el,
+        { opacity: 0, y: 30 },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        }
+    );
+});
 
 
-function mostrarProjeto(id) {
-  const projetos = document.querySelectorAll('.projeto-card');
-  projetos.forEach(p => p.classList.remove('ativo'));
-  document.getElementById('projeto-' + id).classList.add('ativo');
+
+
+//-----------------paginação-------------------
+
+let projetoAtual = 1;
+const totalProjetos = 4;
+
+function mostrarProjeto(n) {
+  if (n === projetoAtual) return;
+
+  const atual = document.getElementById(`projeto-${projetoAtual}`);
+  const novo = document.getElementById(`projeto-${n}`);
+
+  // Animação de saída
+  atual.classList.remove('ativo');
+  atual.classList.add('animando-sair');
+
+  setTimeout(() => {
+    atual.classList.remove('animando-sair');
+    atual.style.display = 'none';
+
+    // Animação de entrada
+    novo.style.display = 'grid';
+    novo.classList.add('animando-entrar', 'ativo');
+
+    setTimeout(() => {
+      novo.classList.remove('animando-entrar');
+    }, 400);
+  }, 400);
+
+  projetoAtual = n;
+  atualizarBotoes();
 }
 
+function proximoProjeto() {
+  let proximo = projetoAtual + 1;
+  if (proximo > totalProjetos) proximo = 1;
+  mostrarProjeto(proximo);
+}
 
+function anteriorProjeto() {
+  let anterior = projetoAtual - 1;
+  if (anterior < 1) anterior = totalProjetos;
+  mostrarProjeto(anterior);
+}
 
-
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.utils.toArray(".projeto-card").forEach((card, i) => {
-    gsap.to(card, {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      delay: i * 0.2,
-      scrollTrigger: {
-        trigger: card,
-        start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
-    });
-  });
-
-
-
-gsap.from("header .logo", {
-  opacity: 0,
-  y: -50,
-  duration: 1,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: "header",
-    start: "top 80%",
-  }
-});
-
-gsap.utils.toArray("[data-animar]").forEach((el) => {
-  gsap.from(el, {
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    scrollTrigger: {
-      trigger: el,
-      start: "top 90%",
-      toggleActions: "play none none none"
+function atualizarBotoes() {
+  for (let i = 1; i <= totalProjetos; i++) {
+    const botao = document.getElementById(`btn-${i}`);
+    if (botao) {
+      botao.classList.remove('ativo');
     }
-  });
+  }
+
+  const botaoAtual = document.getElementById(`btn-${projetoAtual}`);
+  if (botaoAtual) {
+    botaoAtual.classList.add('ativo');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const primeiroProjeto = document.getElementById('projeto-1');
+  if (primeiroProjeto) {
+    primeiroProjeto.style.display = 'grid';
+    primeiroProjeto.classList.add('ativo');
+  }
+  atualizarBotoes();
 });
+
