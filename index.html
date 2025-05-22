@@ -6,8 +6,6 @@
   <title>Alec Vinícius</title>
   <link rel="stylesheet" href="Index/styles.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <div class="layer-blur"></div>
@@ -99,7 +97,9 @@
           <div class="Habilidades-content">
             <div class="content">
               <h3>Hard-skills</h3>
-              <p>javascript, python, R, C#, conhecimentos em front-end e backend, desenvolvimento web, conhecimentos em Exel</p>
+              <p>javascript, HTML-5, CSS-3, python, R, C#,C++, conhecimentos em front-end e backend, desenvolvimento web, conhecimentos em Exel, React,
+                Node, aplicação de API.
+              </p>
             </div>
           </div>
 
@@ -113,7 +113,7 @@
           <div class="Habilidades-content animate-on-scroll">
             <div class="content">
               <h3>Linguagens Principais</h3>
-              <p>javascript, html, css</p> <p>C#</p> <p>python</p>
+              <p>javascript, HTML-5, CSS-3</p> <p>C#</p> <p>python</p>
             </div>
           </div>
         </div>
@@ -125,76 +125,79 @@
   <section class="projetos-vitrine animate-on-scroll" >
     <div id="projetos-container">
       <h3 class="Projeto-T" id="Projetos"><div class="animate-on-scroll"><span>Projetos</span></div></h3>
-      <!-- Projeto 1 -->
-      <div class="projeto-card ativo" id="projeto-1">
-        <div class="projeto-imagem">
-          <img src="imgs/imgIndex/Github-api.png" alt="Projeto 1">
-        </div>
-        <div class="projeto-info">
-          <p class="projeto-categoria">𝙰𝙿𝙸 𝚍𝚘 𝙶𝚒𝚝𝚑𝚞𝚋</p>
-          <p class="projeto-preco"> HTML, CSS, JavaScript, TypeScript e React.</p>
-          <p class="projeto-descricao">API do GitHub, autenticação de usuário </p>
-          <div class="tamanhos">
-            <a href="https://github.com/exdrama23/API-github" target="_blank"><button>GitHub</button></a><a href="https://api-github-mu-five.vercel.app/" target="_blank"><button>Function</button></a>
+     <div class="projetos-wrapper">
+        <button class="seta seta-esquerda" onclick="anteriorProjeto()">&#10094;</button>
+        <!-- Projeto 1 -->
+        <div class="projeto-card ativo" id="projeto-1">
+          <div class="projeto-imagem">
+            <img src="imgs/imgIndex/Github-api.png" alt="Projeto 1">
           </div>
-          <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
-        </div>
-      </div>
-
-      <!-- Projeto 2 -->
-      <div class="projeto-card" id="projeto-2">
-        <div class="projeto-imagem">
-          <img src="imgs/imgIndex/AppPrevisao.png" alt="Projeto 2">
-        </div>
-        <div class="projeto-info">
-          <p class="projeto-categoria">App De Previsão - API</p>
-          <p class="projeto-preco">HTML, CSS e JavaScript</p>
-          <p class="projeto-descricao">Aplicação de clima que consome dados de uma API para exibir temperatura, clima e umidade em tempo real.</p>
-          <div class="tamanhos">
-          <a href="https://github.com/exdrama23/app_previsaoa" target="_blank"><button>GitHub</button></a><a href="https://appprevisaoa.vercel.app" target="_blank"><button>Function</button></a>
-          </div>
+          <div class="projeto-info">
+            <p class="projeto-categoria">𝙰𝙿𝙸 𝚍𝚘 𝙶𝚒𝚝𝚑𝚞𝚋</p>
+            <p class="projeto-preco"> HTML, CSS, JavaScript, TypeScript e React.</p>
+            <p class="projeto-descricao">API do GitHub, autenticação de usuário </p>
+            <div class="tamanhos">
+              <a href="https://github.com/exdrama23/API-github" target="_blank"><button>GitHub</button></a><a href="https://api-github-mu-five.vercel.app/" target="_blank"><button>Function</button></a>
+            </div>
             <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
+          </div>
         </div>
-      </div>
 
-      <!-- Projeto 3 -->
-      <div class="projeto-card" id="projeto-3">
-        <div class="projeto-imagem">
-          <img src="imgs/imgIndex/Formulario.png" alt="Projeto 3">
-        </div>
-        <div class="projeto-info">
-          <p class="projeto-categoria">Formulario Pessoal</p>
-          <p class="projeto-preco">JavaScript + Html</p>
-          <p class="projeto-descricao">Formulário feito com React + Vite. Possui campos de texto, seleção e envio de dados. Projeto simples para prática de formulários e organização</p>
-          <div class="tamanhos">
-            <a href="https://github.com/exdrama23/Formulario" target="_blank"><button>GitHub</button></a><a href="https://exdrama23.vercel.app" target="_blank"><button>Function</button></a>
+        <!-- Projeto 2 -->
+        <div class="projeto-card" id="projeto-2">
+          <div class="projeto-imagem">
+            <img src="imgs/imgIndex/AppPrevisao.png" alt="Projeto 2">
           </div>
-          <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
-        </div>
-      </div>
-      <!-- Projeto 4 -->
-      <div class="projeto-card" id="projeto-4">
-        <div class="projeto-imagem">
-          <img src="imgs/imgIndex/IAPesquisa.png" alt="Projeto 4">
-        </div>
-        <div class="projeto-info">
-          <p class="projeto-categoria">IA: Pesquisa De Imagens</p>
-          <p class="projeto-preco">Python, HTML e CSS</p>
-          <p class="projeto-descricao">Projeto de busca inteligente de imagens usando Bing Image Search API. Permite pesquisar imagens em tempo real</p>
-          <div class="tamanhos">
-            <a href="https://github.com/exdrama23/IA_de_pesquisa" target="_blank"><button>GitHub</button></a><a href="https://ia-de-pesquisa.vercel.app" target="_blank"><button>Function</button></a>
+          <div class="projeto-info">
+            <p class="projeto-categoria">App De Previsão - API</p>
+            <p class="projeto-preco">HTML, CSS e JavaScript</p>
+            <p class="projeto-descricao">Aplicação de clima que consome dados de uma API para exibir temperatura, clima e umidade em tempo real.</p>
+            <div class="tamanhos">
+            <a href="https://github.com/exdrama23/app_previsaoa" target="_blank"><button>GitHub</button></a><a href="https://appprevisaoa.vercel.app" target="_blank"><button>Function</button></a>
+            </div>
+              <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
           </div>
-          <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
         </div>
+
+        <!-- Projeto 3 -->
+        <div class="projeto-card" id="projeto-3">
+          <div class="projeto-imagem">
+            <img src="imgs/imgIndex/Formulario.png" alt="Projeto 3">
+          </div>
+          <div class="projeto-info">
+            <p class="projeto-categoria">Formulario Pessoal</p>
+            <p class="projeto-preco">JavaScript + Html</p>
+            <p class="projeto-descricao">Formulário feito com React + Vite. Possui campos de texto, seleção e envio de dados. Projeto simples para prática de formulários e organização</p>
+            <div class="tamanhos">
+              <a href="https://github.com/exdrama23/Formulario" target="_blank"><button>GitHub</button></a><a href="https://exdrama23.vercel.app" target="_blank"><button>Function</button></a>
+            </div>
+            <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
+          </div>
+        </div>
+        <!-- Projeto 4 -->
+        <div class="projeto-card" id="projeto-4">
+          <div class="projeto-imagem">
+            <img src="imgs/imgIndex/IAPesquisa.png" alt="Projeto 4">
+          </div>
+          <div class="projeto-info">
+            <p class="projeto-categoria">IA: Pesquisa De Imagens</p>
+            <p class="projeto-preco">Python, HTML e CSS</p>
+            <p class="projeto-descricao">Projeto de busca inteligente de imagens usando Bing Image Search API. Permite pesquisar imagens em tempo real</p>
+            <div class="tamanhos">
+              <a href="https://github.com/exdrama23/IA_de_pesquisa" target="_blank"><button>GitHub</button></a><a href="https://ia-de-pesquisa.vercel.app" target="_blank"><button>Function</button></a>
+            </div>
+            <a href="https://github.com/exdrama23?tab=repositories" target="_blank"><button class="ver-projeto">Repositorio</button></a>
+          </div>
+        </div>
+        <button class="seta seta-direita" onclick="proximoProjeto()">&#10095;</button>
       </div>
     </div>
+    
       <div class="paginacao">
-  <button onclick="anteriorProjeto()">&#10094;</button>
   <button id="btn-1" onclick="mostrarProjeto(1)">1</button>
   <button id="btn-2" onclick="mostrarProjeto(2)">2</button>
   <button id="btn-3" onclick="mostrarProjeto(3)">3</button>
   <button id="btn-4" onclick="mostrarProjeto(4)">4</button>
-  <button onclick="proximoProjeto()">&#10095;</button>
 </div>
 
 </main>

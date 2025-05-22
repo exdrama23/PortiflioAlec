@@ -747,6 +747,69 @@ main {
   }
 }
 
+.projetos-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.seta {
+  font-size: 3rem;
+  background: transparent;
+  border: none;
+  color: var(--main-color);
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+  z-index: 10;
+}
+
+.seta:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.seta-esquerda {
+  margin-right: 1rem;
+}
+
+.seta-direita {
+  margin-left: 1rem;
+}
+
+@keyframes entrarProjetoEsquerda {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes sairProjetoDireita {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
+.projeto-card.animando-entrar-esquerda {
+  animation: entrarProjetoEsquerda 0.4s forwards ease;
+}
+
+.projeto-card.animando-sair-direita {
+  animation: sairProjetoDireita 0.4s forwards ease;
+}
+
 
 
 @media (max-width: 768px) {
